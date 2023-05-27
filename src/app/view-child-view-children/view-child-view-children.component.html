@@ -1,0 +1,63 @@
+
+<div class="col-12 border p-4 mt-2 mb-2">
+  <h4 class="alert-secondary p-2 mb-5 text-center">{{"View Child & View Children" | uppercase}}</h4>
+
+
+  <!--
+    <h1 id="sande"> Hi, I am Sandeep </h1>
+
+    <script>
+    const san = document.getElementById("sande");
+    </script>
+
+    same as in Angular
+    -----------------
+    <h1 #sande> Hi, I am Sandeep </h1>
+
+    Syntax :
+    @ViewChild(Selector) varaibleName : type;
+    Example :
+    @ViewChild("sande") san : any;
+
+   -->
+
+   <!-- View Child -->
+   <h4><u>View Child</u> will read the first match of Id and apply the operation on that.</h4>
+   <br/>
+   <h4 #sande>Hello!</h4>
+   <br/>
+   <span>same #id name, here you can see it only reading the first match #id and the second element did not read and the color is normal.  </span>
+   <h4 #sande>Hello!</h4>
+
+   <hr/>
+   <br/>
+
+   <!-- View Children -->
+   <h4><u>View Children</u> it can points to the multiple elements or multiple same Id.</h4>
+   <br/>
+   <h4 #deep>Hi Developer!</h4>
+   <h4 #deep>Hi Developer!</h4>
+
+   <br/>
+   <hr/>
+   <br/>
+
+   <!-- component.ts -->
+   <h4>Counter</h4>
+   <button (click)="dec()">-</button>
+   <span>&nbsp;  {{sandeep?.counter}}  &nbsp;</span>
+   <button (click)="inc()">+</button>
+
+   <app-counter #sandeep></app-counter>
+
+
+
+
+  </div>
+
+
+
+
+  <br/>
+  <br/>
+  <br/>
